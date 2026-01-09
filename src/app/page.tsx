@@ -59,7 +59,7 @@ export default function Home() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-slate-800/80 hover:bg-slate-800 text-white font-semibold text-base rounded-xl border-2 border-yellow-400 hover:border-yellow-300 transition-all duration-300"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-slate-800/80 hover:bg-slate-800 text-white font-semibold text-base rounded-xl border-2 border-yellow-400 hover:border-yellow-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/20 transition-all duration-300"
               >
                 <svg
                   className="w-5 h-5"

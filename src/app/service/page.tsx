@@ -101,7 +101,7 @@ export default function ServicePage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.05 }}
-                  className="group bg-white rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-10 border-2 border-slate-100 hover:border-yellow-400 transition-all duration-300 hover:shadow-xl"
+                  className="group bg-white rounded-[4rem] md:rounded-[4rem] p-8 md:p-10 border-2 border-slate-100 hover:border-yellow-400 transition-all duration-300 hover:shadow-xl"
                 >
                   <div className="flex flex-col h-full">
                     {/* Icon */}

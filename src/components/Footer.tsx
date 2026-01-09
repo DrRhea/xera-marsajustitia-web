@@ -15,9 +15,9 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
             {/* Logo & Description */}
-            <div className="lg:col-span-1">
-              <Link href="/" className="flex items-center mb-6">
-                <div className="relative w-20 h-20">
+            <div className="lg:col-span-1 pt-0">
+              <Link href="/" className="flex items-center mb-1 mt-0">
+                <div className="relative w-40 h-40">
                   <Image
                     src="/logo/marsajustitialogo.png"
                     alt="Marsajustitia Law Office Logo"

@@ -32,7 +32,7 @@ export default function ContactPage() {
               className="space-y-6 md:space-y-8 w-full min-w-0"
             >
               {/* Alamat */}
-              <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] lg:rounded-[2.5rem] p-6 md:p-8 lg:p-10 border-2 border-slate-100 shadow-sm w-full overflow-hidden">
+              <div className="bg-white rounded-4xl p-6 md:p-8 lg:p-10 border-2 border-slate-100 w-full overflow-hidden">
                 <div className="flex items-start gap-4 md:gap-6 w-full">
                   <div className="p-3 md:p-4 bg-yellow-400/10 rounded-xl md:rounded-2xl flex-shrink-0">
                     <Building2 className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-yellow-400" />
@@ -55,7 +55,7 @@ export default function ContactPage() {
               </div>
 
               {/* Nomor Kontak */}
-              <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] lg:rounded-[2.5rem] p-6 md:p-8 lg:p-10 border-2 border-slate-100 shadow-sm w-full overflow-hidden">
+              <div className="bg-white rounded-4xl p-6 md:p-8 lg:p-10 border-2 border-slate-100 w-full overflow-hidden">
                 <div className="flex items-start gap-4 md:gap-6 w-full">
                   <div className="p-3 md:p-4 bg-yellow-400/10 rounded-xl md:rounded-2xl flex-shrink-0">
                     <Phone className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-yellow-400" />
@@ -75,7 +75,7 @@ export default function ContactPage() {
               </div>
 
               {/* Email */}
-              <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] lg:rounded-[2.5rem] p-6 md:p-8 lg:p-10 border-2 border-slate-100 shadow-sm w-full overflow-hidden">
+              <div className="bg-white rounded-4xl p-6 md:p-8 lg:p-10 border-2 border-slate-100 w-full overflow-hidden">
                 <div className="flex items-start gap-4 md:gap-6 w-full">
                   <div className="p-3 md:p-4 bg-yellow-400/10 rounded-xl md:rounded-2xl flex-shrink-0">
                     <Mail className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-yellow-400" />
@@ -100,7 +100,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-white rounded-[1.5rem] md:rounded-[2rem] lg:rounded-[2.5rem] p-6 md:p-8 lg:p-10 border-2 border-slate-100 shadow-sm flex flex-col w-full overflow-hidden"
+              className="bg-white rounded-4xl p-6 md:p-8 lg:p-10 border-2 border-slate-100 flex flex-col w-full overflow-hidden"
             >
               <div className="flex items-center gap-4 md:gap-6 mb-6 md:mb-8 w-full">
                 <div className="p-3 md:p-4 bg-yellow-400/10 rounded-xl md:rounded-2xl flex-shrink-0">
@@ -133,7 +133,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gradient-to-br from-[#1a1f3a] to-slate-900 rounded-[1.5rem] md:rounded-[2rem] lg:rounded-[2.5rem] p-8 md:p-12 lg:p-16 text-center text-white w-full overflow-hidden"
+            className="bg-gradient-to-br from-[#1a1f3a] to-slate-900 rounded-4xl p-8 md:p-12 lg:p-16 text-center text-white w-full overflow-hidden"
           >
             <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-serif mb-4 md:mb-6 break-words">
               Siap Membantu Anda
