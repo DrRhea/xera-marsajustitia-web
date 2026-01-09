@@ -5,8 +5,8 @@ export const siteConfig = {
   shortName: "Marsajustitia",
   description:
     "Kantor Hukum Marsa Justitia - Layanan hukum profesional di Padang, Sumatera Barat. Konsultasi hukum, litigasi, non-litigasi, pidana, perdata, dan berbagai layanan hukum lainnya. Terdaftar di Kemenkumham RI sejak 2016.",
-  url: "https://marsajustitia.com", // Ganti dengan domain sebenarnya
-  ogImage: "/logo/marsajustitialogo.png",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000", // Ganti dengan domain sebenarnya
+  ogImage: "/og-image.png",
   contact: {
     phone: "0811660904",
     email: "marsajustitia75@gmail.com",
@@ -47,6 +47,16 @@ export const siteConfig = {
   ],
 };
 
+const getBaseUrl = () => {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL;
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return "http://localhost:3000";
+};
+
 export const seoMetadata: Metadata = {
   title: {
     default: `${siteConfig.name} | Kantor Hukum Profesional di Padang`,
@@ -62,23 +72,24 @@ export const seoMetadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(getBaseUrl()),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: siteConfig.url,
+    url: "/",
     siteName: siteConfig.name,
     title: `${siteConfig.name} | Kantor Hukum Profesional di Padang`,
     description: siteConfig.description,
     images: [
       {
-        url: siteConfig.ogImage,
+        url: siteConfig.ogImage, // Next.js akan otomatis convert ke absolute URL menggunakan metadataBase
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} Logo`,
+        type: "image/png",
       },
     ],
   },

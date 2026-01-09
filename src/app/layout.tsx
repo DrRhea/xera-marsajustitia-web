@@ -9,7 +9,19 @@ const googleSans = Inter({
   display: "swap",
 });
 
-export const metadata: Metadata = seoMetadata;
+export const metadata: Metadata = {
+  ...seoMetadata,
+  icons: {
+    icon: [
+      { url: "/logo/marsajustitialogo.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo/marsajustitialogo.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/logo/marsajustitialogo.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/logo/marsajustitialogo.png",
+  },
+};
 
 export default function RootLayout({
   children,
