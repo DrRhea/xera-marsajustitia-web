@@ -79,13 +79,13 @@ export const seoMetadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "/",
+    url: getBaseUrl(),
     siteName: siteConfig.name,
     title: `${siteConfig.name} | Kantor Hukum Profesional di Padang`,
     description: siteConfig.description,
     images: [
       {
-        url: siteConfig.ogImage, // Next.js akan otomatis convert ke absolute URL menggunakan metadataBase
+        url: `${getBaseUrl()}${siteConfig.ogImage}`, // Absolute URL untuk memastikan accessible
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} Logo`,

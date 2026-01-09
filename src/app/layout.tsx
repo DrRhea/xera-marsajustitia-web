@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { seoMetadata } from "@/lib/seo";
+import { seoMetadata, siteConfig } from "@/lib/seo";
 
 const googleSans = Inter({
   variable: "--font-google-sans",
@@ -31,10 +31,22 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/logo/marsajustitialogo.png" />
+        <link rel="apple-touch-icon" href="/logo/marsajustitialogo.png" />
+        
+        {/* Open Graph untuk Social Media - Simple & Direct */}
+        <meta property="og:image" content={`${siteConfig.url}${siteConfig.ogImage}`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/jpeg" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:image" content={`${siteConfig.url}${siteConfig.ogImage}`} />
+        
+        {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
