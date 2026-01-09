@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   ...seoMetadata,
   icons: {
     icon: [
-      { url: "/logo/marsajustitialogo.png", sizes: "32x32", type: "image/png" },
-      { url: "/logo/marsajustitialogo.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
     apple: [
       { url: "/logo/marsajustitialogo.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/logo/marsajustitialogo.png",
+    shortcut: "/favicon-32x32.png",
   },
 };
 
@@ -31,6 +31,9 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo/marsajustitialogo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
