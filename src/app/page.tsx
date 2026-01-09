@@ -8,6 +8,7 @@ import { Scale, Gavel, Handshake } from "lucide-react";
 export default function Home() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 800], [0, 300]);
+  const scale = useTransform(scrollY, [0, 800], [1.1, 1]);
 
   return (
     <>
@@ -15,7 +16,7 @@ export default function Home() {
         {/* Background Image dengan Parallax */}
         <motion.div 
           className="absolute inset-0 z-0"
-          style={{ y }}
+          style={{ y, scale }}
         >
           <Image
             src="/hero-bg.webp"
