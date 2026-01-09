@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { seoMetadata } from "@/lib/seo";
 
 const googleSans = Inter({
   variable: "--font-google-sans",
@@ -8,10 +9,7 @@ const googleSans = Inter({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Marsajustitia Law Office",
-  description: "Marsajustitia Law Office - Professional Legal Services",
-};
+export const metadata: Metadata = seoMetadata;
 
 export default function RootLayout({
   children,
