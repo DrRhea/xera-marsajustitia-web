@@ -5,7 +5,7 @@ export const siteConfig = {
   shortName: "Marsajustitia",
   description:
     "Kantor Hukum Marsa Justitia - Layanan hukum profesional di Padang, Sumatera Barat. Konsultasi hukum, litigasi, non-litigasi, pidana, perdata, dan berbagai layanan hukum lainnya. Terdaftar di Kemenkumham RI sejak 2016.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000", // Ganti dengan domain sebenarnya
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://xera-marsajustitia-web.vercel.app",
   ogImage: "/og-image.jpg", // Using JPEG for better compression and WhatsApp compatibility
   contact: {
     phone: "0811660904",
@@ -54,7 +54,7 @@ const getBaseUrl = () => {
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;
   }
-  return "http://localhost:3000";
+  return process.env.NEXT_PUBLIC_SITE_URL || "https://xera-marsajustitia-web.vercel.app";
 };
 
 export const seoMetadata: Metadata = {
