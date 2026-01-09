@@ -6,7 +6,7 @@ export const siteConfig = {
   description:
     "Kantor Hukum Marsa Justitia - Layanan hukum profesional di Padang, Sumatera Barat. Konsultasi hukum, litigasi, non-litigasi, pidana, perdata, dan berbagai layanan hukum lainnya. Terdaftar di Kemenkumham RI sejak 2016.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000", // Ganti dengan domain sebenarnya
-  ogImage: "/og-image.png",
+  ogImage: "/og-image.jpg", // Using JPEG for better compression and WhatsApp compatibility
   contact: {
     phone: "0811660904",
     email: "marsajustitia75@gmail.com",
@@ -89,7 +89,7 @@ export const seoMetadata: Metadata = {
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} Logo`,
-        type: "image/png",
+        type: "image/jpeg",
       },
     ],
   },
