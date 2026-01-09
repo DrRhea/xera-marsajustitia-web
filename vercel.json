@@ -1,9 +1,6 @@
 {
-  "buildCommand": "next build",
+  "buildCommand": "NEXT_PRIVATE_SKIP_TURBO=1 next build",
   "framework": "nextjs",
-  "installCommand": "npm install",
-  "env": {
-    "NEXT_PRIVATE_SKIP_TURBO": "1"
-  }
+  "installCommand": "npm install"
 }
 
