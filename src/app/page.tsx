@@ -18,12 +18,12 @@ export default function Home() {
           className="absolute inset-0 z-0"
           style={{ y, scale }}
         >
-          <Image
+        <Image
             src="/hero-bg.webp"
             alt="Hero Background"
             fill
             className="object-cover"
-            priority
+          priority
             quality={90}
             sizes="100vw"
           />
@@ -43,7 +43,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif text-white leading-tight">
               <span className="block">Your Trusted Partner</span>
               <span className="block">in Seeking Justice.</span>
-            </h1>
+          </h1>
 
             {/* Supporting Paragraph */}
             <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
@@ -163,11 +163,22 @@ export default function Home() {
       </section>
 
       {/* About Us Section */}
-      <section className="relative w-full py-20 md:py-32 overflow-hidden">
-        {/* Background dengan gradient diagonal */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1f3a] via-[#1a1f3a] to-slate-900" />
+      <section className="relative w-full overflow-hidden bg-[#1a1f3a]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/backgrounds/about-us-bg.webp"
+            alt="About Us Background"
+            fill
+            className="object-cover"
+            quality={90}
+            sizes="100vw"
+          />
+          {/* Overlay Navy */}
+          <div className="absolute inset-0 bg-[#1a1f3a]/70" />
+        </div>
         
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24 pb-20 md:pb-24">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
             <motion.div
@@ -180,7 +191,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">
                 Tentang Kami
               </h2>
-              <div className="w-24 h-1 bg-[#1a1f3a] mx-auto" />
+              <div className="w-24 h-1 bg-yellow-400 mx-auto" />
             </motion.div>
 
             {/* Content Preview */}
@@ -241,145 +252,179 @@ export default function Home() {
       </section>
 
       {/* Services Preview Section */}
-      <section className="relative w-full py-20 md:py-32 overflow-hidden bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            {/* Header */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16 md:mb-24"
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#1a1f3a] mb-4">
-                Our Service
-              </h2>
-              <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6" />
-              <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-                Layanan hukum profesional dan terpercaya untuk berbagai kebutuhan hukum Anda
-              </p>
-            </motion.div>
+      <section className="relative w-full overflow-hidden">
+        <div className="grid lg:grid-cols-2 min-h-screen">
+          {/* Left: Image - Solid Background */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-slate-100 overflow-hidden"
+          >
+            <div className="relative w-full h-full min-h-screen">
+            <Image
+                src="/images/backgrounds/our-service-image.webp"
+                alt="Our Service"
+                fill
+                className="object-cover"
+                quality={90}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              {/* Overlay Navy */}
+              <div className="absolute inset-0 bg-[#1a1f3a]/70" />
+            </div>
+          </motion.div>
 
-            {/* Services Grid Preview */}
-            <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12">
-              {[
-                { name: "Konsultasi dan Nasihat Hukum", icon: Scale },
-                { name: "Litigasi dan Non-Litigasi", icon: Gavel },
-                { name: "Penyelesaian Sengketa", icon: Handshake },
-              ].map((service, index) => {
-                const IconComponent = service.icon;
-                return (
+          {/* Right: Our Service Content - Solid Background */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white p-8 md:p-12 lg:p-16 flex flex-col justify-center"
+          >
+            <div className="max-w-2xl mx-auto w-full">
+              {/* Header */}
+              <div className="mb-8 md:mb-12">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#1a1f3a] mb-4">
+                  Our Service
+                </h2>
+                <div className="w-24 h-1 bg-yellow-400 mb-6" />
+                <p className="text-lg md:text-xl text-slate-600">
+                  Layanan hukum profesional dan terpercaya untuk berbagai kebutuhan hukum Anda
+                </p>
+              </div>
+
+              {/* Services Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
+                {[
+                  { name: "Konsultasi dan Nasihat Hukum", icon: Scale },
+                  { name: "Litigasi dan Non-Litigasi", icon: Gavel },
+                  { name: "Penyelesaian Sengketa", icon: Handshake },
+                ].map((service, index) => {
+                  const IconComponent = service.icon;
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="bg-slate-50 rounded-xl p-6 border border-slate-100 hover:border-yellow-400 transition-all duration-300"
+                    >
+                      <div className="p-3 bg-yellow-400/10 rounded-xl w-fit mb-4">
+                        <IconComponent className="w-6 h-6 md:w-8 md:h-8 text-yellow-400" />
+                      </div>
+                      <h3 className="text-base md:text-lg font-serif text-[#1a1f3a]">{service.name}</h3>
+                    </motion.div>
+                  );
+                })}
+              </div>
+
+              {/* View All Button */}
+              <Link
+                href="/service"
+                className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-[#1a1f3a] hover:bg-[#1a1f3a]/90 text-white font-semibold text-sm md:text-base rounded-xl border-2 border-yellow-400 hover:border-yellow-300 transition-all duration-300"
+              >
+                <span>Lihat Semua Layanan</span>
+                <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Lawyers Preview Section */}
+      <section className="relative w-full overflow-hidden">
+        <div className="grid lg:grid-cols-2 min-h-screen">
+          {/* Left: Our Lawyers Content - Solid Background */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-br from-[#1a1f3a] via-[#1a1f3a] to-slate-900 p-8 md:p-12 lg:p-16 flex flex-col justify-center"
+          >
+            <div className="max-w-2xl ml-auto w-full">
+              {/* Header */}
+              <div className="mb-8 md:mb-12 text-right">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">
+                  Our Lawyers
+                </h2>
+                <div className="w-24 h-1 bg-yellow-400 mb-6 ml-auto" />
+                <p className="text-lg md:text-xl text-white/90">
+                  Tim profesional yang berpengalaman dan berdedikasi untuk memberikan layanan hukum terbaik
+                </p>
+              </div>
+
+              {/* Lawyers Grid */}
+              <div className="grid grid-cols-2 gap-4 md:gap-6 mb-8 justify-end">
+                {[
+                  { name: "Maru Saerejen", title: "S. H." },
+                  { name: "Dr. Stepanus Hok", title: "S.H., M.H." },
+                  { name: "Fadhil Fu'ad", title: "S.H., M.H." },
+                  { name: "Asnil Abdillah", title: "S.H." },
+                ].map((lawyer, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-slate-50 rounded-xl p-8 border border-slate-100 hover:border-yellow-400 transition-all duration-300"
+                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 hover:border-yellow-400 transition-all duration-300"
                   >
-                    <div className="p-4 bg-yellow-400/10 rounded-xl w-fit mb-4">
-                      <IconComponent className="w-8 h-8 text-yellow-400" />
+                    <div className="text-center">
+                      <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                        <span className="text-xl md:text-2xl font-serif text-white font-bold">
+                          {lawyer.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
+                        </span>
+                      </div>
+                      <h3 className="text-base md:text-lg font-serif text-white mb-1">{lawyer.name}</h3>
+                      <p className="text-xs md:text-sm text-white/80">{lawyer.title}</p>
                     </div>
-                    <h3 className="text-xl font-serif text-[#1a1f3a]">{service.name}</h3>
                   </motion.div>
-                );
-              })}
-            </div>
+                ))}
+              </div>
 
-            {/* View All Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-center"
-            >
-              <Link
-                href="/service"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#1a1f3a] hover:bg-[#1a1f3a]/90 text-white font-semibold text-base rounded-xl border-2 border-yellow-400 hover:border-yellow-300 transition-all duration-300"
-              >
-                <span>Lihat Semua Layanan</span>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Lawyers Preview Section */}
-      <section className="relative w-full py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1f3a] via-[#1a1f3a] to-slate-900" />
-        
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            {/* Header */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16 md:mb-24"
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">
-                Our Lawyers
-              </h2>
-              <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6" />
-              <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-                Tim profesional yang berpengalaman dan berdedikasi untuk memberikan layanan hukum terbaik
-              </p>
-            </motion.div>
-
-            {/* Lawyers Grid Preview */}
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
-              {[
-                { name: "Maru Saerejen", title: "S. H." },
-                { name: "Dr. Stepanus Hok", title: "S.H., M.H." },
-                { name: "Fadhil Fu'ad", title: "S.H., M.H." },
-                { name: "Asnil Abdillah", title: "S.H." },
-              ].map((lawyer, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-yellow-400 transition-all duration-300"
+              {/* View All Button */}
+              <div className="text-right">
+                <Link
+                  href="/lawyers"
+                  className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold text-sm md:text-base rounded-xl border-2 border-yellow-400 hover:border-yellow-300 transition-all duration-300"
                 >
-                  <div className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
-                      <span className="text-2xl font-serif text-white font-bold">
-                        {lawyer.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-serif text-white mb-1">{lawyer.name}</h3>
-                    <p className="text-sm text-white/80">{lawyer.title}</p>
-                  </div>
-                </motion.div>
-              ))}
+                  <span>Lihat Semua Pengacara</span>
+                  <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
+          </motion.div>
 
-            {/* View All Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-center"
-            >
-              <Link
-                href="/lawyers"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold text-base rounded-xl border-2 border-yellow-400 hover:border-yellow-300 transition-all duration-300"
-              >
-                <span>Lihat Semua Pengacara</span>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </motion.div>
-          </div>
+          {/* Right: Image - Solid Background */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-slate-100 overflow-hidden"
+          >
+            <div className="relative w-full h-full min-h-screen">
+              <Image
+                src="/images/backgrounds/our-lawyers-image.webp"
+                alt="Our Lawyers"
+                fill
+                className="object-cover"
+                quality={90}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              {/* Overlay Navy */}
+              <div className="absolute inset-0 bg-[#1a1f3a]/70" />
+            </div>
+          </motion.div>
         </div>
       </section>
 
