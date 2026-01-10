@@ -30,7 +30,7 @@ export default function LawyersPage() {
             </div>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif text-[#1a1f3a] mb-4 md:mb-6 leading-tight">
-            Our Lawyers
+            Pengacara Kami
           </h1>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6" />
           <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-2">

@@ -253,16 +253,16 @@ export default function Home() {
 
       {/* Services Preview Section */}
       <section className="relative w-full overflow-hidden">
-        <div className="grid lg:grid-cols-2 min-h-screen">
+        <div className="grid lg:grid-cols-2 min-h-screen gap-0">
           {/* Left: Image - Solid Background */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-slate-100 overflow-hidden"
+            className="bg-slate-100 overflow-hidden hidden lg:block"
           >
-            <div className="relative w-full h-full min-h-screen">
+            <div className="relative w-full h-full min-h-[100px] lg:min-h-screen">
             <Image
                 src="/images/backgrounds/our-service-image.webp"
                 alt="Our Service"
@@ -282,13 +282,13 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white p-8 md:p-12 lg:p-16 flex flex-col justify-center"
+            className="bg-white py-8 md:py-12 lg:py-16 px-8 md:px-12 lg:px-16 flex flex-col justify-center"
           >
-            <div className="max-w-2xl mx-auto w-full">
+            <div className="w-full overflow-hidden">
               {/* Header */}
               <div className="mb-8 md:mb-12">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#1a1f3a] mb-4">
-                  Our Service
+                  Layanan Kami
                 </h2>
                 <div className="w-24 h-1 bg-yellow-400 mb-6" />
                 <p className="text-lg md:text-xl text-slate-600">
@@ -339,20 +339,20 @@ export default function Home() {
 
       {/* Lawyers Preview Section */}
       <section className="relative w-full overflow-hidden">
-        <div className="grid lg:grid-cols-2 min-h-screen">
+        <div className="grid lg:grid-cols-2 min-h-screen gap-0">
           {/* Left: Our Lawyers Content - Solid Background */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-[#1a1f3a] via-[#1a1f3a] to-slate-900 p-8 md:p-12 lg:p-16 flex flex-col justify-center"
+            className="bg-gradient-to-br from-[#1a1f3a] via-[#1a1f3a] to-slate-900 py-8 md:py-12 lg:py-16 px-8 md:px-12 lg:px-16 flex flex-col justify-center"
           >
-            <div className="max-w-2xl ml-auto w-full">
+            <div className="w-full overflow-hidden">
               {/* Header */}
               <div className="mb-8 md:mb-12 text-right">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">
-                  Our Lawyers
+                  Pengacara Kami
                 </h2>
                 <div className="w-24 h-1 bg-yellow-400 mb-6 ml-auto" />
                 <p className="text-lg md:text-xl text-white/90">
@@ -410,9 +410,9 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-slate-100 overflow-hidden"
+            className="bg-slate-100 overflow-hidden hidden lg:block"
           >
-            <div className="relative w-full h-full min-h-screen">
+            <div className="relative w-full h-full min-h-[100px] lg:min-h-screen">
               <Image
                 src="/images/backgrounds/our-lawyers-image.webp"
                 alt="Our Lawyers"
