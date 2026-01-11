@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Empty config - let Next.js use default webpack bundler
+  images: {
+    qualities: [75, 90],
+  },
 };
 
 export default nextConfig;
