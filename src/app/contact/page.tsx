@@ -65,10 +65,10 @@ export default function ContactPage() {
                       Nomor Kontak
                     </h3>
                     <a
-                      href="tel:0811660904"
+                      href="tel:+62811660904"
                       className="text-base md:text-lg lg:text-xl text-[#1a1f3a] hover:text-yellow-400 transition-colors font-medium break-all block"
                     >
-                      0811660904
+                      +62 811-6609-04
                     </a>
                   </div>
                 </div>

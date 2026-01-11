@@ -486,8 +486,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-serif text-[#1a1f3a] mb-2">Telepon</h3>
-                <a href="tel:0811660904" className="text-slate-600 hover:text-yellow-400 transition-colors">
-                  0811660904
+                <a href="tel:+62811660904" className="text-slate-600 hover:text-yellow-400 transition-colors">
+                  +62 811-6609-04
                 </a>
               </motion.div>
 

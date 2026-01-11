@@ -4,6 +4,7 @@ import "./globals.css";
 import { seoMetadata, siteConfig } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const googleSans = Inter({
   variable: "--font-google-sans",
@@ -63,6 +64,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

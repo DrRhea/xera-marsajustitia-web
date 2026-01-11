@@ -73,6 +73,72 @@ export default function AboutPage() {
             </div>
           </motion.div>
 
+          {/* Visi & Misi Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-[#1a1f3a] mb-6">
+              Visi & Misi
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+              {/* Visi - Left Side */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="relative"
+              >
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#1a1f3a] rounded-full" />
+                <div className="pl-8 md:pl-12">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="p-3 bg-[#1a1f3a]/20 rounded-xl">
+                      <svg className="w-6 h-6 md:w-8 md:h-8 text-[#1a1f3a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-3xl md:text-4xl font-serif text-[#1a1f3a]">
+                      Visi
+                    </h3>
+                  </div>
+                  <p className="text-base md:text-lg text-slate-700 leading-relaxed">
+                    Menjadi kantor hukum terkemuka, strategis, unggul, dan berdaya saing global sebagai mitra kerja yang memberikan solusi terbaik dan terpercaya dengan menjunjung tinggi nilai-nilai keadilan, profesional dan berintegritas.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Misi - Right Side */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="relative"
+              >
+                <div className="absolute right-0 top-0 bottom-0 w-1 bg-[#1a1f3a] rounded-full" />
+                <div className="pr-8 md:pr-12">
+                  <div className="flex items-center gap-4 mb-6 justify-end">
+                    <h3 className="text-3xl md:text-4xl font-serif text-[#1a1f3a]">
+                      Misi
+                    </h3>
+                    <div className="p-3 bg-[#1a1f3a]/20 rounded-xl">
+                      <svg className="w-6 h-6 md:w-8 md:h-8 text-[#1a1f3a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <p className="text-base md:text-lg text-slate-700 leading-relaxed text-right">
+                    Memberikan layanan hukum berkualitas tinggi dan terpercaya bersama tim yang mempunyai sumber daya manusia yang berkualitas, berpengalaman, profesional, berintegritas dan memiliki inovasi tinggi dengan mengutamakan kepuasan klien serta menjunjung nilai-nilai keadilan dalam setiap solusi hukum, menjunjung etika profesi, memanfaatkan teknologi secara optimal, dan membangun kepercayaan klien secara berkelanjutan.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </div>
