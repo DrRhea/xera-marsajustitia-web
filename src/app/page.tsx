@@ -574,7 +574,7 @@ function GalleryBentoGrid() {
     <section
       ref={sectionRef}
       id="gallery"
-      className="py-20 md:py-32 bg-white"
+      className="py-20 md:py-24 bg-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
