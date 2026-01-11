@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Scale, Gavel, Handshake } from "lucide-react";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -428,6 +430,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <GalleryBentoGrid />
+
       {/* Contact Preview Section */}
       <section className="relative w-full py-20 md:py-32 overflow-hidden bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -529,3 +534,216 @@ export default function Home() {
     </>
   );
 }
+
+// Gallery Bento Grid Component
+function GalleryBentoGrid() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const sectionElement = sectionRef.current;
+    if (!sectionElement) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Animate header
+            if (headerRef.current) {
+              headerRef.current.style.opacity = "1";
+              headerRef.current.style.transform = "translateY(0)";
+            }
+
+            // Grid items are now visible by default (opacity-100 class)
+            // Animation removed to ensure items are visible in production
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(sectionElement);
+
+    return () => {
+      observer.unobserve(sectionElement);
+    };
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      id="gallery"
+      className="py-20 md:py-32 bg-white"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          ref={headerRef}
+          className="text-center mb-16"
+          style={{
+            opacity: 0,
+            transform: "translateY(32px)",
+            transition: "all 0.8s ease-out",
+          }}
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#1a1f3a] mb-4">
+            Galeri
+          </h2>
+          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6" />
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+            Dokumentasi kegiatan dan suasana kantor hukum Marsa Justitia
+          </p>
+        </div>
+
+        <div ref={gridRef} className="max-w-6xl mx-auto">
+          {/* Mobile: Simple Grid */}
+          <div className="grid grid-cols-2 gap-4 md:hidden">
+            {galleryItems.map((item, i) => (
+              <div
+                key={i}
+                className="rounded-xl overflow-hidden bg-white border border-slate-200 aspect-square opacity-100"
+              >
+                {item.header}
+              </div>
+            ))}
+          </div>
+          
+          {/* Desktop: Bento Grid */}
+          <div className="hidden md:block">
+            <BentoGrid className="md:auto-rows-[20rem]">
+              {galleryItems.map((item, i) => (
+                <BentoGridItem
+                  key={i}
+                  title={item.title}
+                  description={item.description}
+                  header={item.header}
+                  className={item.className}
+                  icon={item.icon}
+                />
+              ))}
+            </BentoGrid>
+          </div>
+        </div>
+    </div>
+    </section>
+  );
+}
+
+// Custom Image Component for Bento Grid
+const GalleryImage = ({
+  src,
+  alt,
+  className,
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+}) => (
+  <div className={`relative overflow-hidden h-full ${className || ""}`}>
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      className="object-cover group-hover/bento:scale-105 transition-transform duration-500"
+      quality={90}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    />
+  </div>
+);
+
+const galleryItems = [
+  // Row 1: 2-1 layout
+  {
+    title: "",
+    description: "",
+    header: (
+      <GalleryImage
+        src="/images/gallery/mj1.webp"
+        alt="Kantor Hukum Marsa Justitia"
+        className="h-full"
+      />
+    ),
+    className: "col-span-2 md:col-span-2",
+    icon: null,
+  },
+  {
+    title: "",
+    description: "",
+    header: (
+      <GalleryImage
+        src="/images/gallery/mj4.webp"
+        alt="Kantor Hukum Marsa Justitia"
+        className="h-full"
+      />
+    ),
+    className: "col-span-1 md:col-span-1",
+    icon: null,
+  },
+  // Row 2: 1-1-1 layout
+  {
+    title: "",
+    description: "",
+    header: (
+      <GalleryImage
+        src="/images/gallery/mj3.webp"
+        alt="Kantor Hukum Marsa Justitia"
+        className="h-full"
+      />
+    ),
+    className: "col-span-1 md:col-span-1",
+    icon: null,
+  },
+  {
+    title: "",
+    description: "",
+    header: (
+      <GalleryImage
+        src="/images/gallery/ms1.webp"
+        alt="Kantor Hukum Marsa Justitia"
+        className="h-full"
+      />
+    ),
+    className: "col-span-1 md:col-span-1",
+    icon: null,
+  },
+  {
+    title: "",
+    description: "",
+    header: (
+      <GalleryImage
+        src="/images/gallery/mj2.webp"
+        alt="Kantor Hukum Marsa Justitia"
+        className="h-full"
+      />
+    ),
+    className: "col-span-1 md:col-span-1",
+    icon: null,
+  },
+  // Row 3: 1-2 layout
+  {
+    title: "",
+    description: "",
+    header: (
+      <GalleryImage
+        src="/images/gallery/ms2.webp"
+        alt="Kantor Hukum Marsa Justitia"
+        className="h-full"
+      />
+    ),
+    className: "col-span-1 md:col-span-1",
+    icon: null,
+  },
+  {
+    title: "",
+    description: "",
+    header: (
+      <GalleryImage
+        src="/images/gallery/ms3.webp"
+        alt="Kantor Hukum Marsa Justitia"
+        className="h-full"
+      />
+    ),
+    className: "col-span-2 md:col-span-2",
+    icon: null,
+  },
+];
