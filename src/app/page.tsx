@@ -434,7 +434,7 @@ export default function Home() {
       <GalleryBentoGrid />
 
       {/* Contact Preview Section */}
-      <section className="relative w-full py-20 md:py-32 overflow-hidden bg-white">
+      <section className="relative w-full py-12 md:py-20 overflow-hidden bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
