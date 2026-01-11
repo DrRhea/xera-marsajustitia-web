@@ -1,12 +1,23 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function WhatsAppButton() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Format nomor: +62811660904 (hapus 0 di depan, tambah +62)
   const whatsappNumber = "62811660904";
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <Link
