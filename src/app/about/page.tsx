@@ -41,7 +41,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-base md:text-lg text-slate-700 leading-relaxed mb-6"
               >
-                Kantor Hukum Marsa Justitia berdiri dari kepedulian terhadap masyarakat kurang mampu yang menghadapi berbagai kasus, bahkan kasus kriminalisasi hukum tanpa pemahaman dan perlindungan yang memadai. Sebagai respons atas kondisi tersebut, pada tahun 2012 didirikan Lembaga Bantuan Hukum (LBH) dan Advokasi Marsa Justitia dengan tujuan memberikan advokasi dan pendampingan kasus-kasus dan perkara hukum bagi masyarakat pencari keadilan.
+                Kantor Hukum Marsa Justitia berdiri dari kepedulian terhadap masyarakat kurang mampu yang menghadapi berbagai kasus, bahkan kasus kriminalisasi hukum akibat kurangnya pemahaman dan pengetahuan hukum yang memadai. Sebagai respons atas kondisi tersebut, pada tahun 2012 didirikan Lembaga Bantuan Hukum (LBH) dan Advokasi Marsa Justitia dengan tujuan memberikan advokasi dan pendampingan kasus-kasus dan perkara hukum bagi masyarakat pencari keadilan.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-base md:text-lg text-slate-700 leading-relaxed mb-6"
               >
-                Lembaga Bantuan Hukum dan Advokasi berkembang pesat dan memperoleh kepercayaan luas dari masyarakat, terutama dalam menangani kasus-kasus kriminalisasi dan perkara hukum yang melibatkan warga yang kurang memahami aspek hukum. Seiring banyaknya warga yang dikriminalisasi, adanya warga yang melakukan perbuatan hukum, tetapi akibat kurang memahami aspek hukum, melalui pendampingan hukum yang profesional, berbagai perkara berhasil diselesaikan oleh LBH Marsa, baik melalui mekanisme praperadilan maupun pemeriksaan pokok perkara di Pengadilan Negeri Padang.
+                Lembaga Bantuan Hukum dan Advokasi Marsa Justitia berkembang pesat dan memperoleh kepercayaan luas dari masyarakat, terutama dalam penanganan kasus-kasus kriminalisasi dan perkara hukum yang melibatkan warga yang kurang memahami aspek hukum. Seiring banyaknya warga yang dikriminalisasi, adanya warga yang melakukan perbuatan hukum, tetapi akibat kurang memahami aspek hukum, melalui pendampingan hukum yang profesional, berbagai perkara berhasil diselesaikan oleh LBH Marsa Justitia, baik melalui mekanisme praperadilan maupun pemeriksaan pokok perkara di Pengadilan Negeri hingga kasasi.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-base md:text-lg text-slate-700 leading-relaxed"
               >
-                Kepercayaan dari masyarakat luas hingga badan, perusahaan, dan individu dari kalangan menengah, bersama Lembaga Bantuan Hukum dan Advokasi Marsa Justitia mengembangkan dan meningkatkan menjadi Kantor Hukum Marsa Justitia Padang yang terdaftar di Kantor Kementerian Hukum dengan Nomor: LBHA Marsa Justitia SK Menkum HAM RI Nomor AHU-0072982. AH.0107 Tahun 2016.
+                Kepercayaan dari masyarakat luas hingga badan, perusahaan, dan individu dari kalangan menengah, bersama Lembaga Bantuan Hukum dan Advokasi Marsa Justitia mengembangkan dan meningkatkan menjadi Kantor Hukum Marsa Justitia Padang yang terdaftar di Kantor Kementerian Hukum dengan Nomor: AHU-0002313-AH.01.18 tahun 2025.
               </motion.p>
             </div>
           </motion.div>

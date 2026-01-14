@@ -10,7 +10,7 @@ const lawyers = [
   { name: "Asnil Abdillah", title: "S.H." },
   { name: "Raihan Edimara", title: "S. H." },
   { name: "Annisa Yunieva Rahmayanti Saerejen", title: "Paralegal" },
-  { name: "Anggun Sasmita", title: "S.H." },
+  { name: "Febrian Anggun Sasmita", title: "S.H. (Paralegal dan admin)" },
 ];
 
 export default function LawyersPage() {
@@ -67,7 +67,7 @@ export default function LawyersPage() {
                   
                   {/* Title dengan badge style */}
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-full border border-slate-200 group-hover:bg-yellow-400/10 group-hover:border-yellow-400/30 transition-all duration-300">
-                    {lawyer.title === "Paralegal" ? (
+                    {lawyer.title === "Paralegal" || lawyer.title.includes("Paralegal") ? (
                       <Award className="w-4 h-4 text-yellow-400" />
                     ) : (
                       <Scale className="w-4 h-4 text-[#1a1f3a]" />

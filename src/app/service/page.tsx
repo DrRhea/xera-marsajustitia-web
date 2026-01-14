@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Scale, FileText, Users, Briefcase, Gavel, Handshake, FileCheck, AlertCircle, Building2, Shield } from "lucide-react";
+import { Scale, FileText, Users, Briefcase, Gavel, Handshake, FileCheck, AlertCircle, Building2, Shield, FileSearch, BookOpen, FileQuestion } from "lucide-react";
 
 const services = [
   { 
@@ -18,6 +18,16 @@ const services = [
     name: "Penyusunan dan Peninjauan Kontrak", 
     icon: FileText,
     description: "Penyusunan dan peninjauan kontrak untuk memastikan kepentingan hukum Anda terlindungi"
+  },
+  { 
+    name: "Pendapat Hukum (Legal Opinion)", 
+    icon: FileQuestion,
+    description: "Memberikan pendapat hukum profesional untuk berbagai permasalahan hukum yang Anda hadapi"
+  },
+  { 
+    name: "Penyelesaian Sengketa Pajak", 
+    icon: FileSearch,
+    description: "Pendampingan dalam penyelesaian sengketa perpajakan dengan pendekatan hukum yang tepat"
   },
   { 
     name: "Penyelesaian Sengketa", 
@@ -58,6 +68,11 @@ const services = [
     name: "Praperadilan", 
     icon: Scale,
     description: "Layanan praperadilan untuk memastikan proses hukum berjalan sesuai prosedur"
+  },
+  { 
+    name: "Menguji Peraturan Perundang-undangan di Mahkamah Konstitusi", 
+    icon: BookOpen,
+    description: "Layanan pengujian peraturan perundang-undangan di Mahkamah Konstitusi untuk memastikan kesesuaian dengan konstitusi"
   },
   { 
     name: "Layanan Hukum Lainnya", 
