@@ -206,7 +206,7 @@ export default function Home() {
             >
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
-                  Kantor Hukum Marsa Justitia berdiri dari kepedulian terhadap masyarakat kurang mampu yang menghadapi berbagai kasus, bahkan kasus kriminalisasi hukum tanpa pemahaman dan perlindungan yang memadai.
+                  Kantor Hukum Marsa Justitia berdiri dari kepedulian terhadap masyarakat kurang mampu yang menghadapi berbagai kasus, bahkan kasus kriminalisasi hukum akibat kekurang pahaman dan pengetahuan yang memadai tentang hukum.
                 </p>
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
                   Sebagai respons atas kondisi tersebut, pada tahun 2012 didirikan Lembaga Bantuan Hukum (LBH) dan Advokasi Marsa Justitia dengan tujuan memberikan advokasi dan pendampingan kasus-kasus dan perkara hukum bagi masyarakat pencari keadilan.
