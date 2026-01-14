@@ -24,7 +24,7 @@ export default function WhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-bounce hover:animate-none"
+      className="fixed bottom-6 right-6 z-50 bg-[#1a1f3a] hover:bg-[#15192e] p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
       aria-label="Chat dengan kami via WhatsApp"
     >
       <div className="relative w-6 h-6 md:w-7 md:h-7">
