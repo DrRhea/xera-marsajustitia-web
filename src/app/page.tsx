@@ -212,7 +212,7 @@ export default function Home() {
                   Sebagai respons atas kondisi tersebut, pada tahun 2012 didirikan Lembaga Bantuan Hukum (LBH) dan Advokasi Marsa Justitia dengan tujuan memberikan advokasi dan pendampingan kasus-kasus dan perkara hukum bagi masyarakat pencari keadilan.
                 </p>
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8">
-                  Berdasarkan perkembangan dan meningkatnya kepercayaan masyarakat, pada tahun 2016 Lembaga Bantuan Hukum dan Advokasi Marsa Justitia secara sah dan resmi terdaftar di Kementerian Hukum dan Hak Asasi Manusia Republik Indonesia dengan Nomor LBHA Marsa Justitia SK Menkum HAM RI Nomor AHU-0072982. AH.0107 Tahun 2016.
+                  Berdasarkan perkembangan dan meningkatnya kepercayaan masyarakat, pada tahun 2016 Lembaga Bantuan Hukum dan Advokasi Marsa Justitia secara sah dan resmi terdaftar di Kementerian Hukum dan Hak Asasi Manusia Republik Indonesia dengan Nomor AHU-0072982. AH.0107 Tahun 2016.
                 </p>
               </div>
 
