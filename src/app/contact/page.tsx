@@ -139,7 +139,7 @@ export default function ContactPage() {
               Siap Membantu Anda
             </h3>
             <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed px-2 break-words">
-              Tim profesional kami siap memberikan konsultasi dan layanan hukum terbaik untuk kebutuhan Anda
+              Tim profesional kami siap memberikan konsultasi dan layanan hukum terbaik untuk kebutuhan Anda, sebelum anda mengalami resiko kerugian lebih besar.
             </p>
           </motion.div>
         </div>
