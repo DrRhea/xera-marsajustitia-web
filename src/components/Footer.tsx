@@ -97,9 +97,14 @@ export default function Footer() {
                 <p className="text-white/70 text-sm leading-relaxed">
                   {siteConfig.registration.institution}
                 </p>
-                <p className="text-white/70 text-sm font-medium">
-                  {siteConfig.registration.number}
-                </p>
+                <div className="space-y-2">
+                  <p className="text-white/70 text-sm">
+                    <span className="font-medium">LBH Marsa Justitia AHU:</span> AHU-0072982.AH.0107 Tahun 2016
+                  </p>
+                  <p className="text-white/70 text-sm">
+                    <span className="font-medium">Law Firm Marsa Justitia AHU:</span> AHU-0002313-AH.01.18 tahun 2025
+                  </p>
+                </div>
               </div>
             </div>
           </div>
