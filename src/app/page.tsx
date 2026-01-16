@@ -365,7 +365,7 @@ export default function Home() {
               {/* Lawyers Grid */}
               <div className="grid grid-cols-2 gap-4 md:gap-6 mb-8 justify-end">
                 {[
-                  { name: "Maru Saerejen", title: "S. H.", image: "/images/lawyers/maru_saerejen.jpeg" },
+                  { name: "Maru Saerejen", title: "S.H.", image: "/images/lawyers/maru_saerejen.jpeg" },
                   { name: "Dr. Stepanus Hok", title: "S.H., M.H.", image: "/images/lawyers/stepanus_hok.jpeg" },
                   { name: "Fadhil Fu'ad", title: "S.H., M.H.", image: "/images/lawyers/fadil_fuad.jpeg" },
                   { name: "Asnil Abdillah", title: "S.H.", image: "/images/lawyers/asnil_abdillah.jpeg" },
