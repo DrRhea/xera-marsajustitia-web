@@ -396,8 +396,10 @@ export default function Home() {
                           </div>
                         )}
                       </div>
-                      <h3 className="text-base md:text-lg font-serif text-white mb-1">{lawyer.name}</h3>
-                      <p className="text-xs md:text-sm text-white/80">{lawyer.title}</p>
+                      <h3 className="text-base md:text-lg font-serif text-white mb-1">
+                        {lawyer.name}
+                        {lawyer.title && <span className="ml-2 font-normal text-white/80"> {lawyer.title}</span>}
+                      </h3>
                     </div>
                   </motion.div>
                 ))}
