@@ -386,7 +386,7 @@ export default function Home() {
                             alt={lawyer.name}
                             fill
                             className="object-cover object-top"
-                            style={{ transform: 'scale(1.2)' }}
+                            style={{ transform: 'scale(1.3)' }}
                             sizes="(max-width: 768px) 64px, 80px"
                           />
                         ) : (

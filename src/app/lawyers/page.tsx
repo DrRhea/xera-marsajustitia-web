@@ -60,7 +60,7 @@ export default function LawyersPage() {
                             alt={lawyer.name}
                             fill
                             className="object-cover object-top"
-                            style={{ transform: 'scale(1.2)' }}
+                            style={{ transform: 'scale(1.3)' }}
                             sizes="(max-width: 768px) 112px, 128px"
                           />
                         </div>
