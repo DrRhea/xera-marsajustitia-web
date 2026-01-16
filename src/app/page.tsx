@@ -365,10 +365,10 @@ export default function Home() {
               {/* Lawyers Grid */}
               <div className="grid grid-cols-2 gap-4 md:gap-6 mb-8 justify-end">
                 {[
-                  { name: "Maru Saerejen", title: "S. H." },
-                  { name: "Dr. Stepanus Hok", title: "S.H., M.H." },
-                  { name: "Fadhil Fu'ad", title: "S.H., M.H." },
-                  { name: "Asnil Abdillah", title: "S.H." },
+                  { name: "Maru Saerejen", title: "S. H.", image: "/images/lawyers/maru_saerejen.jpeg" },
+                  { name: "Dr. Stepanus Hok", title: "S.H., M.H.", image: "/images/lawyers/stepanus_hok.jpeg" },
+                  { name: "Fadhil Fu'ad", title: "S.H., M.H.", image: "/images/lawyers/fadil_fuad.jpeg" },
+                  { name: "Asnil Abdillah", title: "S.H.", image: "/images/lawyers/asnil_abdillah.jpeg" },
                 ].map((lawyer, index) => (
                   <motion.div
                     key={index}
@@ -379,10 +379,22 @@ export default function Home() {
                     className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 hover:border-yellow-400 transition-all duration-300"
                   >
                     <div className="text-center">
-                      <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
-                        <span className="text-xl md:text-2xl font-serif text-white font-bold">
-                          {lawyer.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
-                        </span>
+                      <div className="relative w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 rounded-full overflow-hidden border-2 border-yellow-400/30">
+                        {lawyer.image ? (
+                          <Image
+                            src={lawyer.image}
+                            alt={lawyer.name}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 64px, 80px"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center">
+                            <span className="text-xl md:text-2xl font-serif text-white font-bold">
+                              {lawyer.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
+                            </span>
+                          </div>
+                        )}
                       </div>
                       <h3 className="text-base md:text-lg font-serif text-white mb-1">{lawyer.name}</h3>
                       <p className="text-xs md:text-sm text-white/80">{lawyer.title}</p>

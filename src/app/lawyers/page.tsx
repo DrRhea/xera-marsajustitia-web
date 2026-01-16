@@ -2,15 +2,16 @@
 
 import { motion } from "framer-motion";
 import { Scale, Award, Users } from "lucide-react";
+import Image from "next/image";
 
 const lawyers = [
-  { name: "Maru Saerejen", degree: "S.H.", role: null },
-  { name: "Dr. Stepanus Hok", degree: "S.H., M.H.", role: null },
-  { name: "Fadhil Fu'ad", degree: "S.H., M.H.", role: null },
-  { name: "Asnil Abdillah", degree: "S.H.", role: null },
-  { name: "Raihan Edimara", degree: "S.H.", role: null },
-  { name: "Annisa Yunieva Rahmayanti Saerejen", degree: null, role: "Paralegal" },
-  { name: "Febrian Anggun Sasmita", degree: "S.H.", role: "Paralegal dan admin" },
+  { name: "Maru Saerejen", degree: "S.H.", role: null, image: "/images/lawyers/maru_saerejen.jpeg" },
+  { name: "Dr. Stepanus Hok", degree: "S.H., M.H.", role: null, image: "/images/lawyers/stepanus_hok.jpeg" },
+  { name: "Fadhil Fu'ad", degree: "S.H., M.H.", role: null, image: "/images/lawyers/fadil_fuad.jpeg" },
+  { name: "Asnil Abdillah", degree: "S.H.", role: null, image: "/images/lawyers/asnil_abdillah.jpeg" },
+  { name: "Raihan Edimara", degree: "S.H.", role: null, image: "/images/lawyers/raihan_edimara.png" },
+  { name: "Annisa Yunieva Rahmayanti Saerejen", degree: null, role: "Paralegal", image: null },
+  { name: "Febrian Anggun Sasmita", degree: "S.H.", role: "Paralegal dan admin", image: null },
 ];
 
 export default function LawyersPage() {
@@ -49,15 +50,33 @@ export default function LawyersPage() {
                 className="group bg-white rounded-[4rem] md:rounded-[4rem] p-8 md:p-10 border-2 border-slate-100 hover:border-[#1a1f3a] transition-all duration-300 hover:shadow-xl"
               >
                 <div className="text-center">
-                  {/* Avatar dengan gradient elegant */}
+                  {/* Avatar dengan foto atau inisial */}
                   <div className="relative w-28 h-28 md:w-32 md:h-32 mx-auto mb-6">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#1a1f3a] via-[#1a1f3a] to-slate-700 group-hover:from-yellow-400 group-hover:via-yellow-400/80 group-hover:to-yellow-500 transition-all duration-300 flex items-center justify-center shadow-lg">
-                      <span className="text-3xl md:text-4xl font-serif text-white font-bold">
-                        {lawyer.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
-                      </span>
-                    </div>
-                    {/* Decorative ring */}
-                    <div className="absolute inset-0 rounded-full border-2 border-yellow-400/20 group-hover:border-yellow-400/40 transition-all duration-300" />
+                    {lawyer.image ? (
+                      <>
+                        <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-yellow-400/20 group-hover:border-yellow-400/40 transition-all duration-300 shadow-lg">
+                          <Image
+                            src={lawyer.image}
+                            alt={lawyer.name}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 112px, 128px"
+                          />
+                        </div>
+                        {/* Decorative ring */}
+                        <div className="absolute inset-0 rounded-full border-2 border-yellow-400/20 group-hover:border-yellow-400/40 transition-all duration-300 pointer-events-none" />
+                      </>
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#1a1f3a] via-[#1a1f3a] to-slate-700 group-hover:from-yellow-400 group-hover:via-yellow-400/80 group-hover:to-yellow-500 transition-all duration-300 flex items-center justify-center shadow-lg">
+                          <span className="text-3xl md:text-4xl font-serif text-white font-bold">
+                            {lawyer.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
+                          </span>
+                        </div>
+                        {/* Decorative ring */}
+                        <div className="absolute inset-0 rounded-full border-2 border-yellow-400/20 group-hover:border-yellow-400/40 transition-all duration-300" />
+                      </>
+                    )}
                   </div>
                   
                   {/* Name dengan gelar */}
