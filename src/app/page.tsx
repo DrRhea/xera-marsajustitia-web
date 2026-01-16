@@ -385,7 +385,8 @@ export default function Home() {
                             src={lawyer.image}
                             alt={lawyer.name}
                             fill
-                            className="object-cover"
+                            className="object-cover object-top"
+                            style={{ transform: 'scale(1.2)' }}
                             sizes="(max-width: 768px) 64px, 80px"
                           />
                         ) : (
@@ -397,8 +398,7 @@ export default function Home() {
                         )}
                       </div>
                       <h3 className="text-base md:text-lg font-serif text-white mb-1">
-                        {lawyer.name}
-                        {lawyer.title && <span className="ml-2 font-normal text-white/80"> {lawyer.title}</span>}
+                        {lawyer.name} {lawyer.title && <span className="ml-2 font-normal text-white/80"> {lawyer.title}</span>}
                       </h3>
                     </div>
                   </motion.div>

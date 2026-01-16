@@ -59,7 +59,8 @@ export default function LawyersPage() {
                             src={lawyer.image}
                             alt={lawyer.name}
                             fill
-                            className="object-cover"
+                            className="object-cover object-top"
+                            style={{ transform: 'scale(1.2)' }}
                             sizes="(max-width: 768px) 112px, 128px"
                           />
                         </div>
