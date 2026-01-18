@@ -43,14 +43,12 @@ export default function Home() {
           >
             {/* Main Headline */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif text-white leading-tight">
-              <span className="block">Your Trusted Partner</span>
-              <span className="block">in Seeking Justice.</span>
+              Marsa Justitia
           </h1>
 
             {/* Supporting Paragraph */}
             <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              <span className="block">Registered with the Ministry of Law and Human Rights of Indonesia</span>
-              <span className="block">providing professional legal services with integrity and justice.</span>
+              Mitra hukum profesional dan berpengalaman
             </p>
 
             {/* CTA Button */}
