@@ -21,7 +21,7 @@ export default function Home() {
           style={{ y, scale }}
         >
         <Image
-            src="/hero-bg.webp"
+            src="/images/gallery/mj1.webp"
             alt="Hero Background"
             fill
             className="object-cover"

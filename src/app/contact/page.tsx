@@ -112,7 +112,7 @@ export default function ContactPage() {
               </div>
               <div className="flex-1 aspect-video bg-slate-200 rounded-xl md:rounded-2xl overflow-hidden min-h-[250px] md:min-h-[300px] w-full">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3156!2d100.3614!3d-0.9492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwNTYnNTcuMSJTIDEwMMKwMjEnNDEuMSJF!5e0!3m2!1sid!2sid!4v1234567890123!5m2!1sid!2sid"
+                  src="https://www.google.com/maps?q=Jl.+Khatib+Sulaiman+No.66,+Padang+Utara,+Kota+Padang,+Sumatera+Barat&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -123,7 +123,7 @@ export default function ContactPage() {
                 />
               </div>
               <p className="text-xs md:text-sm lg:text-base text-slate-500 mt-4 md:mt-6 text-center break-words w-full">
-                Jl. Khatib Sulaiman No.66, Padang Utara, Padang, Sumatera Barat
+                Jl. Khatib Sulaiman No.66 Kecamatan Padang Utara Kota Padang Provinsi Sumatera Barat (kurang lebih 300-700 meter dari kantor OJK, Pengadilan Negeri Padang dan BPK Sumbar)
               </p>
             </motion.div>
           </div>

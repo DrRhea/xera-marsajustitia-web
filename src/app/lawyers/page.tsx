@@ -10,8 +10,8 @@ const lawyers = [
   { name: "Fadhil Fu'ad", degree: "S.H., M.H.", role: null, image: "/images/lawyers/fadil_fuad.jpeg" },
   { name: "Asnil Abdillah", degree: "S.H.", role: null, image: "/images/lawyers/asnil_abdillah.jpeg" },
   { name: "Raihan Edimara", degree: "S.H.", role: null, image: "/images/lawyers/raihan_edimara.png" },
-  { name: "Annisa Yunieva Rahmayanti Saerejen", degree: null, role: "Paralegal", image: null },
-  { name: "Febrian Anggun Sasmita", degree: "S.H.", role: "Paralegal dan admin", image: null },
+  { name: "Annisa Yunieva Rahmayanti Saerejen", degree: null, role: "Paralegal", image: "/images/lawyers/annisa_yunieva_rahmayanti_saerejen.png" },
+  { name: "Febrian Anggun Sasmita", degree: "S.H.", role: "Paralegal dan admin", image: "/images/lawyers/febrian_anggun_sasmita.jpeg" },
 ];
 
 export default function LawyersPage() {
