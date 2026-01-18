@@ -112,7 +112,7 @@ export default function ContactPage() {
               </div>
               <div className="flex-1 aspect-video bg-slate-200 rounded-xl md:rounded-2xl overflow-hidden min-h-[250px] md:min-h-[300px] w-full">
                 <iframe
-                  src="https://www.google.com/maps?q=Jl.+Khatib+Sulaiman+No.66,+Padang+Utara,+Kota+Padang,+Sumatera+Barat&output=embed"
+                  src="https://www.google.com/maps?q=Kantor+Hukum+Marsa+Justitia,+Jl.+Khatib+Sulaiman+No.66,+Ulak+Karang+Utara,+Kec.+Padang+Utara,+Kota+Padang,+Sumatera+Barat+25132&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

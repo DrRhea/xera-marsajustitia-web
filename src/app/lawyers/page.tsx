@@ -59,7 +59,7 @@ export default function LawyersPage() {
                             src={lawyer.image}
                             alt={lawyer.name}
                             fill
-                            className="object-cover object-top"
+                            className={`object-cover ${lawyer.image.includes('annisa') ? 'object-center' : 'object-top'}`}
                             style={{ transform: 'scale(1.3)' }}
                             sizes="(max-width: 768px) 112px, 128px"
                           />
