@@ -67,7 +67,7 @@ const services = [
   { 
     name: "Praperadilan", 
     icon: Scale,
-    description: "Layanan praperadilan untuk memastikan proses hukum berjalan sesuai prosedur"
+    description: "Layanan praperadilan untuk memastikan proses hukum berjalan sesuai prosedur. Meninjau dan menguji prosedur penetapan status Tersangka, proses penangkapan dan penahanan."
   },
   { 
     name: "Menguji Peraturan Perundang-undangan di Mahkamah Konstitusi", 

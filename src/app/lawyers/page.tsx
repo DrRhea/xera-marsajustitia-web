@@ -11,7 +11,7 @@ const lawyers = [
   { name: "Asnil Abdillah", degree: "S.H.", role: null, image: "/images/lawyers/asnil_abdillah.jpeg" },
   { name: "Raihan Edimara", degree: "S.H.", role: null, image: "/images/lawyers/raihan_edimara.png" },
   { name: "Annisa Yunieva Rahmayanti Saerejen", degree: null, role: "Paralegal", image: "/images/lawyers/annisa_yunieva_rahmayanti_saerejen.png" },
-  { name: "Febrian Anggun Sasmita", degree: "S.H.", role: "Paralegal dan admin", image: "/images/lawyers/febrian_anggun_sasmita.jpg" },
+  { name: "Febrian Anggun Sasmita", degree: "S.H.", role: "Paralegal dan Admin", image: "/images/lawyers/febrian_anggun_sasmita.jpg" },
 ];
 
 export default function LawyersPage() {
